@@ -45,7 +45,12 @@ class ZootopiaTasksStack:
         return self.__top.__data if self.__size != 0 else None
 
     def is_empty(self):
-        pass
+        """
+        Проверка коллекции на пустоту
+        :return: True - если коллекция пуста
+                 False - если в коллекции есть задачи
+        """
+        return self.__top is not None
 
     def count(self):
         pass
