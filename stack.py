@@ -2,8 +2,8 @@ class ZootopiaTasksStack:
 
     class Node:
         def __init__(self, data):
-            self.__data = data
-            self.__prev = None
+            self.data = data
+            self.prev = None
 
     def __init__(self):
         self.__top = None
@@ -17,7 +17,7 @@ class ZootopiaTasksStack:
         """
 
         new_node = ZootopiaTasksStack.Node(ZootopiaTask)
-        new_node.__prev = self.__top
+        new_node.prev = self.__top
         self.__top = new_node
 
         self.__size += 1
@@ -31,8 +31,8 @@ class ZootopiaTasksStack:
         if self.__size == 0:
             return None
 
-        data = self.__top.__data
-        self.__top = self.__top.__perv
+        data = self.__top.data
+        self.__top = self.__top.prev
         self.__size -= 1
 
         return data
@@ -42,7 +42,7 @@ class ZootopiaTasksStack:
         Возвращает последнюю добаленную задачу из коллекции
         :return: Последняя внесенная задача в коллекцию
         """
-        return self.__top.__data if self.__size != 0 else None
+        return self.__top.data if self.__size != 0 else None
 
     def is_empty(self):
         """
