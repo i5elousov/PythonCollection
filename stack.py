@@ -5,4 +5,17 @@ class ZootopiaTasksStack:
             self.__data = data
             self.__prev = None
 
-    pass
+    def push(self, ZootopiaTask):
+        pass
+
+    def pop(self):
+        pass
+
+    def peek(self):
+        pass
+
+    def is_empty(self):
+        pass
+
+    def count(self):
+        pass
