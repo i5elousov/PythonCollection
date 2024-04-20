@@ -53,4 +53,8 @@ class ZootopiaTasksStack:
         return self.__top is not None
 
     def count(self):
-        pass
+        """
+        Возвращает количство задач в коллекции
+        :return: возвращает натуральное число
+        """
+        return self.__size
