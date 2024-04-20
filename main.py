@@ -1,2 +1,5 @@
+from datetime import datetime
 class ZootopiaTask:
-    pass
+    def __init__(self, discription: str, duedata=None):
+        self.__discription = discription
+        self.__duedata = duedata
